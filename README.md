@@ -52,3 +52,8 @@ Luego del nombre de dominio viene el puerto, en el primer ejemplo el puerto es e
 Además del dominio y el puerto, una dirección web contiene la ruta o el path en donde se encuentra el recurso, dentro del servidor. Piensa en que si el dominio fuera una colonia, el path sería la ruta para llegar a una casa en específico, ya que si bien el dominio representa al servidor, el path representa el recurso en específico que queremos.
 
 El path por defecto es la /, misma que puede omitirse por lo que asumimos que si no hay path, estamos tratando de acceder al inicio, la /. En nuestros ejemplos de direcciones, el path es siempre / con excepción del último donde se indica que buscamos el recurso con la ruta /cursos.
+
+**Creando nuestro primer servidor**
+
+npm init -> crea el archivo de configuración package.json 
+nodejs archivo.js -> ejecuta el archivo javascript para levantar el server
