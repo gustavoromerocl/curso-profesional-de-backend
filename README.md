@@ -56,4 +56,10 @@ El path por defecto es la /, misma que puede omitirse por lo que asumimos que si
 **Creando nuestro primer servidor**
 
 npm init -> crea el archivo de configuración package.json 
-nodejs archivo.js -> ejecuta el archivo javascript para levantar el server
+nodejs archivo.js -> ejecuta el archivo javascript para levantar el server, se esta ejecutando en mac o windows solo usar el nombre node sin js
+
+**Express**
+
+npm install express
+
+Framework minimalista de desarrollo web del lado del servidor, provee de herramientas pre diseñadas para agilizar y mejorar el desarrollo
