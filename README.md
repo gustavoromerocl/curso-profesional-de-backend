@@ -68,3 +68,10 @@ Framework minimalista de desarrollo web del lado del servidor, provee de herrami
 
 https://www.postman.com/
 
+**Recibir datos de la petición**
+
+Del lado izquierdo del ? tendremos la ruta donde enviaremos el mesaje y del lado derecho los parametros de consulta
+
+https://localhost:3000/saludo?<query-param>
+
+Las query param tienen algunas restricciones, como por ejemplo los espacios deben ser definidos con %20
