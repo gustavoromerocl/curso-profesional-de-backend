@@ -93,3 +93,9 @@ El codigo statico como imagenes, css y js debe ir es un carpeta aparte del codig
 Un motor de vista permite insertar codigo del servidor en las vistas html, en este caso usaremos EJS. Parte de la configuración es crear una carpeta views donde se alojaran las vistas. Además las vistas deben tener extención .ejs
 
 npm install ejs
+
+**Qué es el caché**
+
+caché -> Es un espacio de memoria que almacena las respuestas del servidor para mejore su rendimiento. 
+proxy -> es un intermediario entre el la solicitud y la respuesta, antes de enviar la solicitud el proxy revisa si ya se habia realizado previamente por lo que revisara el caché, si esta ahí, no es necesario enviarla al servidor.
+
