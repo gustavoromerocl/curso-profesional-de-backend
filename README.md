@@ -79,3 +79,17 @@ Las query param tienen algunas restricciones, como por ejemplo los espacios debe
 **Datos con post**
 
 npm install body-parser -> libreria que apoya el descifrado de datos en el body de las request
+
+**Enviar html**
+
+__dirname -> retorna la ruta absoluta del proyecto
+
+**Servir archivos staticos**
+
+El codigo statico como imagenes, css y js debe ir es un carpeta aparte del codigo de nuestra app, puesto que lo que esta contenido en esta ruta es accesible publicamente
+
+**Motores de vistas**
+
+Un motor de vista permite insertar codigo del servidor en las vistas html, en este caso usaremos EJS. Parte de la configuración es crear una carpeta views donde se alojaran las vistas. Además las vistas deben tener extención .ejs
+
+npm install ejs
