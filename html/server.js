@@ -5,7 +5,10 @@ const app = express();
 app.set('view engine', 'ejs')
  
 //Servir archivos staticos
-app.use('/assets',express.static('assets')); // use inserta un nuevo middleware
+app.use('/assets',express.static('assets', {
+    etag: false, //desactiva ETag, por defecto viene en true
+    maxAge: '5h'
+})); // use inserta un nuevo middleware
 
 /*//Enviar html
 app.get('/', function(req,res){
@@ -21,3 +24,4 @@ app.get('/', function(req,res){
 })
 
 app.listen(3000);
+
