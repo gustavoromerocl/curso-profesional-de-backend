@@ -75,3 +75,7 @@ Del lado izquierdo del ? tendremos la ruta donde enviaremos el mesaje y del lado
 https://localhost:3000/saludo?<query-param>
 
 Las query param tienen algunas restricciones, como por ejemplo los espacios deben ser definidos con %20
+
+**Datos con post**
+
+npm install body-parser -> libreria que apoya el descifrado de datos en el body de las request
