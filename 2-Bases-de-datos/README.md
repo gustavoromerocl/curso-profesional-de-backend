@@ -84,4 +84,8 @@ Los CRUDs son programas que involucren todas estas operaciones sobre una entidad
 
 Ahora ya sabes que cuando digamos, haremos el CRUD de esta entidad, significa las operaciones que aquí mencionamos.
 
+**Insertar registros en la base de datos**
+
+npm install body-parser -> dependencia para leer el cuerpo de las peticiones
+
 
