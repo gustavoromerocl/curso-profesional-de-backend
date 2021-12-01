@@ -28,3 +28,7 @@ https://sequelize-mock.readthedocs.io/en/stable/
 sequelize model:generate --name Task --attributes description:text -> crea una migracion
 sequelize db:migrate -> ejecuta la migracion
 sequelize db:migrate:undo -> revierte la ultima migración
+
+**Vistas**
+
+npm install pug -> motor de vistas

@@ -12,6 +12,7 @@ const app = express();
 }); */
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use('view engine', 'pug');
 
 app.post('/pendientes', function(req, res){
     //db.run(`INSERT INTO tasks(description) VALUES(?)`, req.body.description);
