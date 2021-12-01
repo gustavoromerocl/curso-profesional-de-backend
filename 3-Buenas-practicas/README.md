@@ -10,4 +10,6 @@ Controlador: capa que comunica las solicitudes de la vista hacia el modelo y las
 
 **Organizar un proyecto MVC**
 
+**Qué son las migraciones**
 
+Las migraciones son archivos que ejecutan modificaciones a nuestra base de datos de una forma segura, ya que permiten revertir dichos cambios en caso de haber cometido un error. Cada ORM cuenta con su sintaxis propia para apoyar dichos cambios en la bbdd.
