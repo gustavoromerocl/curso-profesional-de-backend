@@ -125,3 +125,34 @@ En general, te recomiendo que, a menos que tengas una razón especial para no us
 
 npm install sequelize
 
+**Bases de datos relacionales y no relacionales**
+
+En el mercado de las bases de datos podemos distinguir dos principales grupos, las bases de datos relacionales y las no relacionales.
+
+Cada que inicies una nueva aplicación web, vas a enfrentarte con la decisión de si debes usar un tipo u otro, por eso en este vídeo voy a explicarte las diferencias y te daré algunos consejos para decidir entre un tipo u otro.
+
+Vamos a empezar por darnos una idea visual de la diferencia entre un tipo y otro. Las bases de datos relacionales suelen estar representadas por un conjunto de tablas, estas tablas tienen una estructura definida de campos, como las tablas, podemos pensar en estas entidades como estructuras rígidas, nuestros registros entonces sólo pueden tener la forma de una fila que llena los campos de la tabla.
+
+Las bases de datos no relacionales se componen de colecciones de documentos, algunas bases de datos representan estos documentos como objetos JSON. Estas bases de datos son más flexibles, te permiten guardar los campos que quieras en cada registro que vas guardando, como en un objeto, tú puedes decidir qué campos guardar para cada uno de los objetos que irán al almacén.
+
+Este primer panorama nos dice que si nuestros datos tienen una estructura bien definida, usaremos bases de datos relacionales y si no, usaremos no relacionales.
+
+Si vamos al nombre, la diferencia está en las relaciones, unas, las relacionales las tienen, y otras, las no relacionales, simplemente no.
+
+Usualmente los esquemas de datos que pensamos para nuestra aplicación tienen elementos que están relacionados entre sí, por ejemplo si estamos creando una red social, las publicaciones tienen una relación de propietario con el usuario que las creó, porque son SUS publicaciones, le pertenecen a él, las fotos por ejemplo, le pertenecen a alguna persona, en otros casos las relaciones son más complejas, por ejemplo en una aplicación como CódigoFacilito tenemos cursos, que son tomados por muchas personas y esas mismas personas pueden tomar uno o varios cursos.
+
+Estas relaciones suelen trasladarse a nuestro esquema de base de datos de manera que sea fácil poder hacer consultas basado en estas relaciones, como por ejemplo, obtener todas las publicaciones que son propiedad de un usuario, o todos los cursos que una persona está tomando, o al revés, qué personas están tomando un curso.
+
+Algunas de estas operaciones son más complejas aún, qué cantidad de cursos estás tomando, cuál es el promedio de los exámenes que has tomado, etc.
+
+Para eso las bases de datos relacionales no sólo ofrecen la posibilidad de establecer estas relaciones, si no que, además, ofrecen los mecanismos para hacer operaciones aprovechando las relaciones de nuestro esquema, desde cálculo de datos, agrupación y obtener datos de múltiples entidades que estén relacionadas entre sí.
+
+Por otro lado, algunas de estas operaciones son muy lentas o requieren de un consumo importante de memoria.
+
+Es por esto que las bases de datos no relacionales ofrecen una alternativa en la que las operaciones entre elementos relacionados se sustituyen por otras estrategias, cada base de datos ofrece algunas distintas, en algunas de ellas por ejemplo duplicamos información o almacenamos resultados de un cálculo para no tener que estarlo realizando cada que necesitemos esa información.
+
+Esta es la principal diferencia entre ambos tipos de bases de datos, las relaciones. Mi recomendación es que utilices las bases de datos relacionales cuando estas relaciones representan parte importante de tu aplicación, ya que aunque sí podrás replicarlo con las estrategias no relacionales, el modelo es más complejo de razonar y puede llevar pasos extra que eventualmente se recompensan con un mejor rendimiento.
+
+Las bases de datos no relacionales son excelentes para aplicaciones donde la consulta es constante y debe hacerse rápido, los chats por ejemplo son un buen ejemplo, constantemente estamos escribiendo datos y consultándolos.
+
+Para la mayor parte de los casos, y especialmente ahora que estás comenzando, vas a necesitar una base de datos relacional, es una de este tipo la que usaremos en lo que resta del curso. Sin embargo, en CódigoFacilito mismo tenemos otros cursos con bases de datos no relacionales, así que más adelante podrás aprender a trabajar con este otro tipo de motores.
