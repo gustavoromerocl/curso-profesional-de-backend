@@ -91,3 +91,32 @@ npm install body-parser -> dependencia para leer el cuerpo de las peticiones
 **Limpiar parametros (sanitize)**
 
 Con el objetivo de evitar inyecciones maliciosas en nuestras querys, nunca debemos ingresar de forma directa los datos en la query. Para solucionar este problema existe sanitize, en el cual se reemplazan los valores por un signo de interrogacion. 
+
+**Qué es un ORM**
+
+Aunque podríamos desarrollar una aplicación web completa usando instrucciones SQL, estas pueden convertir nuestro código en uno muy verboso, complejo de entender y difícil de modificar.
+
+Alternativamente, los desarrolladores backend usamos lo que se conocen como Object Relational Mapping, u ORM por sus siglas. Estas librerías se encargan de ofrecer clases y métodos para que podamos manipular la base de datos usando programación orientada a objetos.
+
+Internamente, estos métodos se traducen a SQL para que las operaciones puedan ejecutarse sobre la base de datos. Además de eso, las instrucciones generadas por un ORM son usualmente seguras y optimizadas, esto porque los mejores ORM’s tienen años en desarrollo y son de código abierto, permitiendo que los mismos usuarios del ORM reporten y solucionen bugs, de modo que los resultados del ORM están en constante mejora.
+
+Si aún no te imaginas cómo podrían verse las consultas SQL con objetos, considera este ejemplo con Sequelizejs, un ORM para NodeJS.
+
+La inserción a nuestra tabla tasks pasaría de verse así:
+
+db.run(`INSERT INTO tasks (description) VALUES (?)`,req.body.description);
+A verse así:
+
+Task.create({
+ description: req.body.description
+});
+
+Como puedes ver, el ejemplo con objetos y métodos es más legible y claro que la instrucción SQL, por otro lado, aprender SQL es mucho más complejo que aprender a usar un ORM, como podrás ver del ejemplo mismo.
+
+Sin embargo, es importante mencionar que para sacar el mayor provecho de un ORM, y poder optimizar las sentencias que se generan, sí debes saber SQL y fundamentos de bases de datos relacionales, recuerda que para eso puedes ver el Curso Profesional de Bases de Datos aquí mismo en CódigoFacilito.
+
+Por otro lado, uno de los grandes beneficios de usar un ORM, es que nos permite intercambiar el motor de base de datos, sin tener que modificar el código que utilizamos, simplemente le decimos, ahora usa sqlite, y ahora usa Postgres, y la librería se encargará de generar el código SQL para el motor indicado.
+
+Este es un beneficio muy valioso considerando que ciertos motores están mejor diseñados para tareas específicas, sqlite para el desarrollo del sitio, Postgres para el entorno en producción, etc.
+
+En general, te recomiendo que, a menos que tengas una razón especial para no usar un ORM, siempre los utilices, protegerán tu aplicación de posibles ataques por una base de datos mal configurada, harán del motor de base de datos prescindible, de manera que no casarás tu aplicación con uno de ellos, y además las operaciones serán más fáciles de comprender y razonar cuando ves tu código, que si usas SQL.
