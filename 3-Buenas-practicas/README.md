@@ -21,3 +21,10 @@ CLI = comand line interface
 npm install -g sequelize-cli -> instala la linea de comandos a nivel global
 sequelize init -> integra sequelize al proyecto, ejecutar dentro de la carpeta contenedora 
 
+**Generando migraciones**
+
+https://sequelize-mock.readthedocs.io/en/stable/
+
+sequelize model:generate --name Task --attributes description:text -> crea una migracion
+sequelize db:migrate -> ejecuta la migracion
+sequelize db:migrate:undo -> revierte la ultima migración
