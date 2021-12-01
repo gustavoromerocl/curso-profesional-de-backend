@@ -18,3 +18,33 @@ SQL es un lenguaje complejo y para entenderlo a fondo necesitamos no sólo saber
 
 Es por eso que sería imposible integrar ese conocimiento en este curso, por lo que voy a limitarme a enseñarte las consultas para ejecutar las operaciones más comunes de una aplicación web, y aunque estoy seguro de que con lo aprendido en este curso podrás empezar a crear aplicaciones web con bases de datos relacionales usando el lenguaje SQL para consultas, sería estupendo que en paralelo con este curso siguieras el Curso Profesional de Bases de Datos en el que Eduardo te enseñará SQL a fondo.
 
+**Configurando SQLite**
+
+El motor de base de datos que vamos a usar para este curso es SQLite, es un motor ligero y fácil de instalar, que está pensado para almacenar cantidades de datos pequeñas y es ideal para el desarrollo de aplicaciones.
+
+Dicho esto, también es importante considerar que para cuando subamos nuestra aplicación al internet, seguramente vamos a querer utilizar un motor de base de datos más robusto como mySQL o Postgres, y ojo, aunque todos estos motores usan SQL como lenguaje de consultas, cada uno de ellos agrega o cambia ciertas cosas al lenguaje, así que ten cuidado con qué operaciones vas a utilizar y considera si están disponibles en todos los motores de base de datos en los que tu aplicación vaya a ejecutarse.
+
+INSTALACIÓN EN WINDOWS
+Para instalar sqlite3 en Windows necesitas, en primer lugar, dirigirte al sitio web https://www.sqlite.org/download.html ahí te dirigirás a la sección Precompiled Binaries for Windows, en la que encontrarás los binarios para Windows, de ahí tienes que descargar los archivos:
+
+sqlite-tools
+sqlite-dll
+Asegúrate de seleccionar los archivos de descarga adecuados, ya que para ambos existen versiones de 32 bits (x86) y 64 bits (x64).
+
+Una vez que descargues los archivos y los descomprimas, ya que originalmente vienen como un .zip, tienes que moverlos a la carpeta system32 para agregarlos C:\WINDOWS\system32
+
+INSTALACIÓN EN UBUNTU
+Muy simple, sólo instala sqlite3 y libsqlite3-dev con el manejador de paquetes de tu preferencia, por ejemplo con el siguiente comando ejecutándose en la terminal
+
+apt-get install sqlite3 libsqlite3-dev
+INSTALACIÓN EN MACOS
+En versiones modernas de MacOS, sqlite viene pre instalado así que no necesitas hacer instalaciones adicionales para poder seguir este curso.
+
+Una vez que hayas instalado y configurado sqlite deberás poder ejecutar el siguiente comando en la Terminal o el CMD para poder visualizar la versión instalada de sqlite
+
+sqlite3 --version
+En mi caso el resultado es la versión 3.19.3 de sqlite.
+
+Una vez que corrobores que el comando anterior fue ejecutado con éxito, podrás continuar con el siguiente tema del curso.
+
+No olvides postear tus dudas en caso de que algo en la instalación se te haya complicado.
