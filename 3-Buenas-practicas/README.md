@@ -13,3 +13,11 @@ Controlador: capa que comunica las solicitudes de la vista hacia el modelo y las
 **Qué son las migraciones**
 
 Las migraciones son archivos que ejecutan modificaciones a nuestra base de datos de una forma segura, ya que permiten revertir dichos cambios en caso de haber cometido un error. Cada ORM cuenta con su sintaxis propia para apoyar dichos cambios en la bbdd.
+
+**CLI de sequelize**
+
+CLI = comand line interface
+
+npm install -g sequelize-cli -> instala la linea de comandos a nivel global
+sequelize init -> integra sequelize al proyecto, ejecutar dentro de la carpeta contenedora 
+
