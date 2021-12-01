@@ -88,4 +88,6 @@ Ahora ya sabes que cuando digamos, haremos el CRUD de esta entidad, significa la
 
 npm install body-parser -> dependencia para leer el cuerpo de las peticiones
 
+**Limpiar parametros (sanitize)**
 
+Con el objetivo de evitar inyecciones maliciosas en nuestras querys, nunca debemos ingresar de forma directa los datos en la query. Para solucionar este problema existe sanitize, en el cual se reemplazan los valores por un signo de interrogacion. 

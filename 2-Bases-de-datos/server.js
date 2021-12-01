@@ -13,7 +13,7 @@ let db = new sqlite.Database('proyecto-backend');
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.post('/pendientes', function(req, res){
-    db.run("INSERT INTO tasks VALUES('Hola mundo')");
+    db.run(`INSERT INTO tasks(description) VALUES(?)`, req.body.description);
     res.send('Inserción finalizada');
 });
 
