@@ -137,6 +137,10 @@ Desde el controlador se hace render de la vista que habiamos creado previamente 
 
 Para acceder a un recurso en particular, se hace mediante una propiedad wildcard (/:id) que es pasada en la ruta a través del atributo params de la petición al server. Esta es consultada en el controlador en busca de una coincidencia mediante el método findByPk() del modelo
 
+**Actualizar registros**
+
+Usando la misma ruta con la propiedad wildcard, podemos recepcionar la petición update. Al usar route del objeto router podemos recibir mas de una petición utilizando la misma URI y así manipular le recurso
+
 
 
 
