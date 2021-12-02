@@ -141,6 +141,10 @@ Para acceder a un recurso en particular, se hace mediante una propiedad wildcard
 
 Usando la misma ruta con la propiedad wildcard, podemos recepcionar la petición update. Al usar route del objeto router podemos recibir mas de una petición utilizando la misma URI y así manipular le recurso
 
+**Formularios con PUT, PATCH y DELETE**
 
+Los formularios a traves de el navegador se limitan al envío de peticion GET y POST, para poder usar PUT y DELETE es necesario usar un middleware que sobreescribe el método al momento de hacer SUBMIT
+
+npm install method-override
 
 
