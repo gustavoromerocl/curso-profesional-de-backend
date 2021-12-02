@@ -2,8 +2,8 @@ const Task = require('../models').Task;
 
 module.exports = {
   index: function(req,res){
-    Task.findAll().then((task)=>{
-      res.json(task);
+    Task.findAll().then((tasks)=>{
+      res.render('tasks/index', {tareas: tasks});
     })
   },
   create: function(req,res){

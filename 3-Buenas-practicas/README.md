@@ -129,5 +129,9 @@ Es posible generar rutas que no realicen efectos secundarios, como en este caso 
 
 A través del controlador se llama al modelo para acceder al método findAll() que retorna una promesa con un arreglo de objetos, por ahora este arreglo lo retornamos como respuesta en formato json
 
+**Vista para todos los registros**
+
+Desde el controlador se hace render de la vista que habiamos creado previamente con nombre index, la que despliega la variable pasada a traves de los parametros en el controlador de nombre tareas.
+
 
 
