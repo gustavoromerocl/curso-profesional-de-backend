@@ -1,4 +1,4 @@
-#Bases de datos
+# Bases de datos
 
 **El lenguaje SQL**
 
