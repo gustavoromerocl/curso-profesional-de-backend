@@ -133,5 +133,10 @@ A través del controlador se llama al modelo para acceder al método findAll() q
 
 Desde el controlador se hace render de la vista que habiamos creado previamente con nombre index, la que despliega la variable pasada a traves de los parametros en el controlador de nombre tareas.
 
+**Consulta individual de recursos**
+
+Para acceder a un recurso en particular, se hace mediante una propiedad wildcard (/:id) que es pasada en la ruta a través del atributo params de la petición al server. Esta es consultada en el controlador en busca de una coincidencia mediante el método findByPk() del modelo
+
+
 
 
