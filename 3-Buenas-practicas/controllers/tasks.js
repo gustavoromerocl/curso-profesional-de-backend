@@ -10,5 +10,8 @@ module.exports = {
       console.log(err);
       res.json(err);
     })
+  },
+  new: function(req,res){
+    res.render('tasks/new');
   }
 };

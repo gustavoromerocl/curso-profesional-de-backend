@@ -120,3 +120,12 @@ Como podrás notar, el beneficio de estas es que se establece una guía para la 
 **Crear nuevos registros**
 
 Rest trabaja principalmente sobre las rutas generando los recursos antes mencionados, por lo que puede trabajar en paralelo con la arquitectura MVC que a su vez cumple con el pricipio de separación de capas. 
+
+**Formularios**
+
+Es posible generar rutas que no realicen efectos secundarios, como en este caso la ruta new que solo muestra el formulario y no genera ninguna acción
+
+
+
+
+
