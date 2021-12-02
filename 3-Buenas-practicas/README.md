@@ -57,3 +57,10 @@ REST: Representaitional State Transfer
 5- Que posee una interfaz uniforme: Es el estandar de la interfaz de comunicación entre cliente - servidor
 
 6- Envio de código on demand
+
+**REST en la práctica**
+
+URI: uniform resource identifier -> recursos
+URL: uniform reource location -> acciones
+
+Las URI son identificadores únicos que poseen los recursos(img,html,json,xml,etc)en el servidor
