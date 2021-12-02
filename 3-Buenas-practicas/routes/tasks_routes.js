@@ -9,6 +9,9 @@ router.get('/tasks/new', TasksController.new); // no genera efectos secundarios 
 
 router.get('/tasks/:id/edit', TasksController.edit);
 
-router.route('/tasks/:id').get(TasksController.show).put(TasksController.update); //wildcard
+router.route('/tasks/:id')//wildcard
+    .get(TasksController.show)
+    .put(TasksController.update)
+    .delete(TasksController.destroy);
 
 module.exports = router;
