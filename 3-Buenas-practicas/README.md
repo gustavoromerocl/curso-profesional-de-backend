@@ -125,7 +125,9 @@ Rest trabaja principalmente sobre las rutas generando los recursos antes mencion
 
 Es posible generar rutas que no realicen efectos secundarios, como en este caso la ruta new que solo muestra el formulario y no genera ninguna acción
 
+**Mostrar registros**
 
+A través del controlador se llama al modelo para acceder al método findAll() que retorna una promesa con un arreglo de objetos, por ahora este arreglo lo retornamos como respuesta en formato json
 
 
 
