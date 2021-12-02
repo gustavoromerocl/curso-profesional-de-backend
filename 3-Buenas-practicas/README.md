@@ -32,3 +32,10 @@ sequelize db:migrate:undo -> revierte la ultima migración
 **Vistas**
 
 npm install pug -> motor de vistas
+
+**seeders**
+
+sequelize seed:generate --name generate_tasks -> crea el archivo base para poblar las tablas
+sequelize db:seed:all -> ejecuta el archivo seed y al inserción de datos
+sequelize db:seed:undo -> deshace el ultimo seed ejecutado
+sequelize db:seed:undo:all -> revierte todos los seeders
