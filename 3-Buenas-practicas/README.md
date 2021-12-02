@@ -116,3 +116,7 @@ DELETE /cursos
 Esta es la manera a través de la que usamos los verbos Http en una aplicación web. Estos en combinación con las URIs proveen la interfaz uniforme de la que hablamos cuando discutimos las características de un sistema REST.
 
 Como podrás notar, el beneficio de estas es que se establece una guía para la construcción de la aplicación, las rutas siempre representan recursos, las acciones se representan con Http.
+
+**Crear nuevos registros**
+
+Rest trabaja principalmente sobre las rutas generando los recursos antes mencionados, por lo que puede trabajar en paralelo con la arquitectura MVC que a su vez cumple con el pricipio de separación de capas. 
