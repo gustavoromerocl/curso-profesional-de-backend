@@ -39,3 +39,21 @@ sequelize seed:generate --name generate_tasks -> crea el archivo base para pobla
 sequelize db:seed:all -> ejecuta el archivo seed y al inserción de datos
 sequelize db:seed:undo -> deshace el ultimo seed ejecutado
 sequelize db:seed:undo:all -> revierte todos los seeders
+
+**Que es REST**
+
+REST: Representaitional State Transfer
+
+6 principios de la arquitectura
+
+1- Arquitectura cliente/servidor: Separación de responsabilidades, lo que permite que la interfaz pueda ser multiplataforma y que ambos puedan crecer de forma independiente
+
+2- Que sea Stateless: La interacción entre el cliente y el servidor debe ser sin estado
+
+3- Cacheability: Posibilidad de guardar algunas respuestas en la memoria caché
+
+4- El sistema debe estar basado en capas: El servidor debe estar compuesto por varias capas independientes, lo que permite que en caso de requerir reemplazar alguna, se pueda gestionar sin alterar al resto
+
+5- Que posee una interfaz uniforme: Es el estandar de la interfaz de comunicación entre cliente - servidor
+
+6- Envio de código on demand
