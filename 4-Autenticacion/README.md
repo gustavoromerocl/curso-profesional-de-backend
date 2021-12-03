@@ -24,3 +24,7 @@ npm install bcrypt
 hooks -> Ejecutan funciones antes o despues de un evento
 
 Se ejecuta la encriptación dentro de una promesa debido a que es una función asíncrona y tiene un reatdo en ms. La implementación se hace en el modelo con el hook beforeCreate 
+
+**Creación de usuarios**
+
+Importando el modelo en el controlador y mediante el método create, se crea el usuario mediante el formulario 
