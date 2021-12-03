@@ -1,5 +1,12 @@
 # Buenas ṕrácticas de desarrollo
 
+**Presentación del bloque**
+
+-Oranización del código -> prácticas de arquitectura
+-Código claro y legible ->
+-Código modular -> reemplazable e independiente
+-Código fácil de corregir ->
+
 **Qué es el MVC**
 
 La sigla MVC hace referencia a un patrón de arquitectura que divide el codigo en las siguientes capas: 
