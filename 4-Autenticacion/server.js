@@ -3,7 +3,8 @@ const sqlite = require('sqlite3');
 const bodyParser = require('body-parser');
 const Sequelize = require('sequelize');
 const methodOverride = require('method-override');
-const session = require('express-session')
+const session = require('express-session');
+const findUserMiddleware = require('./middlewares/find_user');
 
 const app = express();
 
@@ -25,9 +26,14 @@ app.use(session({
     resave: false
 }));
 
+app.use(findUserMiddleware);
 app.use(tasksRoutes);
 app.use(registrationsRoutes);
 app.use(sessionsRoutes);
+
+app.get('/', function(req,res){
+    res.render('home', {user: req.user})
+});
 
 
 //Rutas
