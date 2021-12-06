@@ -36,3 +36,7 @@ Para validar la sesión creamos una nueva ruta con su respectiva vista y control
 **Manejo de sesiones**
 
 npm install express-session
+
+**Que es un middleware**
+
+Un middleware es un capa de la cual esta compuesta el framework y funciona también con el protocolo http. La diferencia con las peticiones vistas hasta ahora es que ademas de request y response, recibe un tercer parametro llamado next(), que sirve para darle el pase al siguiente middleware o para detectar errores, en el caso de que se le pase un parámetro a la función. Además, los objetos y variables contenidos en las request son compartidos, por lo que se puede acceder desde distintos middleware a las variables.
