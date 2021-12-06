@@ -6,10 +6,12 @@ module.exports = {
     },
     create: function(req,res){
         User.login(req.body.email, req.body.password)
-            .then(user => res.json(user))
+            .then(user => {
+                if (user) req.session.userId = user.id;
+            })
             .catch( err => {
                 res.send(err);
                 console.log(err);
-            });
+            }); 
     }
 }

@@ -32,3 +32,7 @@ Importando el modelo en el controlador y mediante el método create, se crea el 
 **Autenticación**
 
 Para validar la sesión creamos una nueva ruta con su respectiva vista y controlador. Mediante un formulario recibe el usuario y contraseña que es enviado al método creado en el modelo User.
+
+**Manejo de sesiones**
+
+npm install express-session

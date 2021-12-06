@@ -3,6 +3,7 @@ const sqlite = require('sqlite3');
 const bodyParser = require('body-parser');
 const Sequelize = require('sequelize');
 const methodOverride = require('method-override');
+const session = require('express-session')
 
 const app = express();
 
@@ -18,9 +19,16 @@ app.set('view engine', 'pug'); //Asigna el motor de vistas
 app.use(methodOverride('_method'));
 
 //agregar las rutas a la aplicación
+app.use(session({
+    secret:['23lñwkjejqwekff', 'a2342mdslañdcn'],
+    saveUninitialized: false,
+    resave: false
+}));
+
 app.use(tasksRoutes);
 app.use(registrationsRoutes);
 app.use(sessionsRoutes);
+
 
 //Rutas
 
