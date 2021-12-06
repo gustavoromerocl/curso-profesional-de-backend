@@ -44,3 +44,7 @@ Un middleware es un capa de la cual esta compuesta el framework y funciona tambi
 **Buscar usuario autenticado**
 
 Para realizar la busqueda usamos un custom middleware, es decir, creamos un middleware para buscar y asignar al req params el usuario de la sesión.
+
+**Cerrar sesión**
+
+Para destruir la sesión activa usé el middleware session y se metodo destroy, que recibe como parametro un callback, que en este caso redirecciona a la ruta /sessions
