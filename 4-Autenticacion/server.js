@@ -5,6 +5,7 @@ const Sequelize = require('sequelize');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const findUserMiddleware = require('./middlewares/find_user');
+const authUserMiddleware = require('./middlewares/auth_user');
 
 const app = express();
 
@@ -12,6 +13,7 @@ const app = express();
 const tasksRoutes = require('./routes/tasks_routes');
 const registrationsRoutes = require('./routes/registrations_routes');
 const sessionsRoutes = require('./routes/sessions_routes');
+
 
 //const tasks = require('./controllers/tasks'); //importa el controlador
 
@@ -26,10 +28,12 @@ app.use(session({
     resave: false
 }));
 
+app.use(authUserMiddleware);
 app.use(findUserMiddleware);
 app.use(tasksRoutes);
 app.use(registrationsRoutes);
 app.use(sessionsRoutes);
+
 
 app.get('/', function(req,res){
     res.render('home', {user: req.user})

@@ -48,3 +48,7 @@ Para realizar la busqueda usamos un custom middleware, es decir, creamos un midd
 **Cerrar sesión**
 
 Para destruir la sesión activa usé el middleware session y se metodo destroy, que recibe como parametro un callback, que en este caso redirecciona a la ruta /sessions
+
+**Middlewares para protección de rutas**
+
+Se crea el custom middleware auth_user que valida que la url no contenga la ruta tasks, de lo contrario solicita autenticar.
