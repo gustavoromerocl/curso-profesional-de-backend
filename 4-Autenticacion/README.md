@@ -28,3 +28,7 @@ Se ejecuta la encriptación dentro de una promesa debido a que es una función a
 **Creación de usuarios**
 
 Importando el modelo en el controlador y mediante el método create, se crea el usuario mediante el formulario 
+
+**Autenticación**
+
+Para validar la sesión creamos una nueva ruta con su respectiva vista y controlador. Mediante un formulario recibe el usuario y contraseña que es enviado al método creado en el modelo User.

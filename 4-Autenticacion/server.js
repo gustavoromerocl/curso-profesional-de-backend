@@ -9,6 +9,7 @@ const app = express();
 //importar archivo de rutas
 const tasksRoutes = require('./routes/tasks_routes');
 const registrationsRoutes = require('./routes/registrations_routes');
+const sessionsRoutes = require('./routes/sessions_routes');
 
 //const tasks = require('./controllers/tasks'); //importa el controlador
 
@@ -19,6 +20,7 @@ app.use(methodOverride('_method'));
 //agregar las rutas a la aplicación
 app.use(tasksRoutes);
 app.use(registrationsRoutes);
+app.use(sessionsRoutes);
 
 //Rutas
 
