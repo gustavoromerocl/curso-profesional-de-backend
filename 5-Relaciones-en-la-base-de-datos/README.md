@@ -33,3 +33,8 @@ Supongamos que llamamos a esta tabla suscripciones, y en ella definimos un campo
 Eventualmente, esta tabla nos va a servir qué usuarios están suscritos a un canal, más adelante en el curso veremos qué clase de consultas necesitamos hacer para poder conocer esta información.
 
 Recuerda que puedes reforzar el conocimiento que adquieres de bases de datos, siguiendo el curso dedicado a este tema en codigofacilito.com/cursos/base-datos-profesional donde detallamos operaciones de consulta que puedes realizar.
+
+**Relaciones uno a muchos - El esquema**
+
+sequelize migration:create --name add_user_id_to_tasks 
+sequelize db:migrate
