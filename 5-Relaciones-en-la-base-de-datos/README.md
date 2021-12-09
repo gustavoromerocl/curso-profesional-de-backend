@@ -45,3 +45,7 @@ Una vez modificado el esquema, es necesario definir la relacion en el apartado a
 
 Model.hasMany -> tiene muchos
 Model.belongsTo -> le pertenece a uno
+
+**Nombres para asosiaciones**
+ 
+mediante el uso de la palabra reervada as: es posible asignar un alias a las tablas con el fin de evitar conflictos de naming que entorpezca la consulta de sequelize
