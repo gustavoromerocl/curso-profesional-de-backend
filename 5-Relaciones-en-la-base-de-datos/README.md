@@ -72,3 +72,7 @@ userId:{
           key: 'id', // key in Target model that we're referencing
         }
 }
+
+**Eager loading (cargado anticipado)**
+
+Es uan buena pŕactica cargar el contenido de las relaciones o de las tablas asociativas, con el fin de mejorar el rendimiento del servidor.
