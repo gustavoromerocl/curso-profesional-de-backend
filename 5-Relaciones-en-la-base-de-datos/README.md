@@ -38,3 +38,10 @@ Recuerda que puedes reforzar el conocimiento que adquieres de bases de datos, si
 
 sequelize migration:create --name add_user_id_to_tasks 
 sequelize db:migrate
+
+**Relaciones uno a muchos - los modelos**
+
+Una vez modificado el esquema, es necesario definir la relacion en el apartado associate en los modelos con los métodos:
+
+Model.hasMany -> tiene muchos
+Model.belongsTo -> le pertenece a uno
