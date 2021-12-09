@@ -54,3 +54,21 @@ mediante el uso de la palabra reervada as: es posible asignar un alias a las tab
 **Guardar relacion uno a muchos**
 
 Se agrega al create del controlador de tasks el parametro userId, que es obtenido de el usuario que inicio sesión
+
+**Relaciones en un proyecto real**
+
+Si bien, habrá muchas ocasiones en las que para definir una relación uno a muchos seguirás los pasos que aquí realizamos, que son:
+
+Agregar la columna y la llave foránea.
+Establecer las relaciones en cada uno de los modelos
+Es también muy común que la relación se establezca desde el momento en que se crean las tablas, especialmente cuando ya tienes experiencia desarrollando proyectos, es fácil distinguir las relaciones desde el momento en el que por primera vez definimos una nueva tabla.
+
+Es por eso que consideré importante mencionar que también puedes definir una llave foránea en una migración que cree una tabla. Si abrimos, por ejemplo, la definición de la tabla Tasks, agregar el campo userId sería muy fácil:
+
+userId:{
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'User', // name of Target model
+          key: 'id', // key in Target model that we're referencing
+        }
+}
