@@ -49,3 +49,8 @@ Model.belongsTo -> le pertenece a uno
 **Nombres para asosiaciones**
  
 mediante el uso de la palabra reervada as: es posible asignar un alias a las tablas con el fin de evitar conflictos de naming que entorpezca la consulta de sequelize
+
+
+**Guardar relacion uno a muchos**
+
+Se agrega al create del controlador de tasks el parametro userId, que es obtenido de el usuario que inicio sesión
