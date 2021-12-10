@@ -13,6 +13,7 @@ const app = express();
 const tasksRoutes = require('./routes/tasks_routes');
 const registrationsRoutes = require('./routes/registrations_routes');
 const sessionsRoutes = require('./routes/sessions_routes');
+const categoriesRoutes = require('./routes/categories_routes');
 
 
 //const tasks = require('./controllers/tasks'); //importa el controlador
@@ -33,6 +34,7 @@ app.use(findUserMiddleware);
 app.use(tasksRoutes);
 app.use(registrationsRoutes);
 app.use(sessionsRoutes);
+app.use(categoriesRoutes);
 
 
 app.get('/', function(req,res){
