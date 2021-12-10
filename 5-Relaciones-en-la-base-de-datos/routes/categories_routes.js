@@ -6,9 +6,11 @@ router.route('/categories')
     .get(CategoryController.index)
     .post(CategoryController.create);
 
-router.route('/categories/new').get(CategoryController.new)
+router.get('/categories/new', CategoryController.new);
 
 router.route('/categories/:id')
-    .get(CategoryController.show)
+    .get(CategoryController.show);
+
+router.get('/categories/:id/edit', CategoryController.edit);
 
 module.exports = router;

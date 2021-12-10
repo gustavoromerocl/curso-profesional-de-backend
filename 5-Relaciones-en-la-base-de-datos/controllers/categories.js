@@ -21,4 +21,7 @@ module.exports = {
         })
         .catch(err => res.jason(err));
     },
+    edit: function(req,res){
+        Category.findByPk(req.params.id).then( category => res.render('categories/edit', {category}));
+    }
 }
