@@ -102,3 +102,9 @@ Una tabla asociativa, debe de almacenar una referencia para cada una de las dos 
 Usando esta estrategia, cada que queramos establecer una relación uno a muchos entre dos elementos, creamos un nuevo registro en una tabla asociativa que apunte a ambos elementos en la relación.
 
 Si aún no te cuadra bien cómo debe suceder esta relación, pasemos a los siguientes temas para poner en práctica el conocimiento que hemos adquirido.
+
+**Tabla asociativa**
+
+sequelize model:generate --name TaskCategories --attributes taskId:integer,categoryId:integer
+
+Se debe agregar la configuración de la relación a el campo references en el archivo de migración antes de ejecutarlo
