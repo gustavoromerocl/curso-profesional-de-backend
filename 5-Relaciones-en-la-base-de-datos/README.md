@@ -76,3 +76,29 @@ userId:{
 **Eager loading (cargado anticipado)**
 
 Es uan buena pŕactica cargar el contenido de las relaciones o de las tablas asociativas, con el fin de mejorar el rendimiento del servidor.
+
+**Relaciones muchos a muchos**
+
+Si bien, las relaciones 1 a muchos dependen de un campo que apunta de una tabla hacia otra, a la que llamamos llave foránea, las relaciones muchos a muchos requieren de otras formas y estrategias.
+
+Piensa por un momento en un ejemplo de una relación muchos a muchos, intenta traer una tú mismo, considera que normalmente leemos una relación de este tipo como que una entidad A tiene muchos elementos de una entidad B, y a su vez, B puede tener muchos elementos de A.
+
+Si te ayuda, te daré un ejemplo, un canal de YouTube puede tener muchos suscriptores, y a su vez cada suscriptor puede estar suscrito a muchos canales de YouTube, y ahí lo tienes, una relación de muchos a muchos.
+
+Si se te ocurrió alguna otra, déjala en los comentarios para ayudar a reforzar el concepto de tus compañeros de clase, voy a estar leyendo los ejemplos que coloquen.
+
+En una base de datos relacional, las relaciones muchos a muchos suelen representarse a través de una tabla asociativa.
+
+Considera que tenemos una tabla Canal, y una tabla Usuario, como en el ejemplo que di antes, se establece que un usuario puede suscribirse a muchos canales, y que un canal puede tener muchos suscriptores, ya que ésta se trata de una relación muchos a muchos, vamos a introducir una nueva tabla, cuya función será la de asociar la tabla canales y la tabla usuarios.
+
+Para que la nueva tabla pueda hacer esta función debe contener al menos dos campos, uno de ellos apuntando a la tabla usuarios y otro apuntando a la tabla canales. De tal manera que si yo quisiera establecer que el usuario Uriel, se relaciona con el canal CódigoFacilito, en esta nueva tabla guardaría un registro así:
+
+Canal	Usuario
+CodigoFacilito	Uriel
+CodigoFacilito	Marines
+MarinesMG	Rafa
+Una tabla asociativa, debe de almacenar una referencia para cada una de las dos tablas que está relacionando, de alguna manera puedes pensar que esta tabla se relaciona con el esquema uno a muchos con ambas tablas, en nuestro ejemplo podemos establecer que la nueva tabla tiene una relación de pertenencia para el usuario, y una de pertenencia para el canal.
+
+Usando esta estrategia, cada que queramos establecer una relación uno a muchos entre dos elementos, creamos un nuevo registro en una tabla asociativa que apunte a ambos elementos en la relación.
+
+Si aún no te cuadra bien cómo debe suceder esta relación, pasemos a los siguientes temas para poner en práctica el conocimiento que hemos adquirido.
