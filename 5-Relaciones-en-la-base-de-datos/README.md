@@ -108,3 +108,7 @@ Si aún no te cuadra bien cómo debe suceder esta relación, pasemos a los sigui
 sequelize model:generate --name TaskCategories --attributes taskId:integer,categoryId:integer
 
 Se debe agregar la configuración de la relación a el campo references en el archivo de migración antes de ejecutarlo
+
+**Definir relaciones muchos a muchos**
+
+Se agrega configuración en los modelos con la palabra reservada belongsToMany
