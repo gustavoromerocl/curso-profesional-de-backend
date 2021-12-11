@@ -35,5 +35,13 @@ module.exports = {
             }
         })
         .then( response => res.redirect(`/categories/${req.params.id}`)); // se usa metodo redirect por lo que se usa el path y no el archivo donde se ubica la vista
+    },
+    destroy: function(req,res){
+        Category.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(response => res.redirect('/categories'));
     }
 }
