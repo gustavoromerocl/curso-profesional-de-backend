@@ -112,3 +112,8 @@ Se debe agregar la configuración de la relación a el campo references en el ar
 **Definir relaciones muchos a muchos**
 
 Se agrega configuración en los modelos con la palabra reservada belongsToMany
+
+**Crear y mostrar relaciones muchos a muchos**
+
+Es importante usar en la configuración de las consultas el método include que nos permite usar la variable de la relacion que definimos. Esto con el fin de acceder a los datos
+

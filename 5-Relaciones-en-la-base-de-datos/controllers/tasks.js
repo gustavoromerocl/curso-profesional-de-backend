@@ -15,12 +15,19 @@ module.exports = {
         {
           model: User,
           as: 'user'
-        }
+        },
+        'categories'
       ]
     }).then(task => res.render('tasks/show', {task}))
   },
   edit: function(req,res){
-    Task.findByPk(req.params.id).then(task => res.render('tasks/edit', {task}))
+    Task.findByPk(req.params.id, {
+      include: [
+        'categories'
+      ]
+    }).then( (task) => {
+      res.render('tasks/edit', {task})
+    })
   },
   destroy: function(req,res){
     Task.destroy({
@@ -41,14 +48,26 @@ module.exports = {
     })
   },
   update: function(req,res){
-    Task.update({description: req.body.description},{
+/*     Task.update({description: req.body.description},{
       where: {
         id: req.params.id
       }
     }).then((response) => {
       //res.json(response) // retorna un contador de los elementos actualizados
       res.redirect(`/tasks/${req.params.id}`)
-    });
+    }); */
+
+    Task.findByPk(req.params.id).then(task => {
+      task.description = req.body.description;
+
+      task.save().then(() => {
+        let categoryIds = req.body.categories.split(",");
+
+        task.addCategories(categoryIds).then(() => {
+          res.redirect(`/tasks/${task.id}`);
+        })
+      })
+    })
   },
   new: function(req,res){
     res.render('tasks/new');
