@@ -9,7 +9,8 @@ router.route('/categories')
 router.get('/categories/new', CategoryController.new);
 
 router.route('/categories/:id')
-    .get(CategoryController.show);
+    .get(CategoryController.show)
+    .put(CategoryController.update);
 
 router.get('/categories/:id/edit', CategoryController.edit);
 

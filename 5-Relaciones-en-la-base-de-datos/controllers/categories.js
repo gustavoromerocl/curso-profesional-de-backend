@@ -23,5 +23,17 @@ module.exports = {
     },
     edit: function(req,res){
         Category.findByPk(req.params.id).then( category => res.render('categories/edit', {category}));
+    },
+    update: function(req,res){
+        Category.update({
+            title: req.body.title,
+            color: req.body.color
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        })
+        .then( response => res.redirect(`/categories/${req.params.id}`)); // se usa metodo redirect por lo que se usa el path y no el archivo donde se ubica la vista
     }
 }
