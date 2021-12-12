@@ -25,3 +25,7 @@ En los siguientes temas vamos a aprender a comunicarnos vía Websockets con Sock
 **usuarios conectados en tiempo real**
 
 npm install socket.io
+
+**comunicar el servidor http y el servidor de websockets**
+
+npm install socket.io-client

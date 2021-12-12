@@ -55,8 +55,9 @@ app.post('/pendientes', function(req, res){
 
 
 let server = app.listen(3000);
-
 let io = socketio(server);
+
+
 
 let usersCount = 0;
 
@@ -68,3 +69,5 @@ io.on('connection', function(socket){
         usersCount--;
     })
 })
+
+const client = require('./realtime/client');
