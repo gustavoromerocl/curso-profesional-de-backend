@@ -7,6 +7,8 @@ const session = require('express-session');
 const findUserMiddleware = require('./middlewares/find_user');
 const authUserMiddleware = require('./middlewares/auth_user');
 
+const socketio = require('socket.io');
+
 const app = express();
 
 //importar archivo de rutas
@@ -52,4 +54,17 @@ app.post('/pendientes', function(req, res){
 
 
 
-app.listen(3000);
+let server = app.listen(3000);
+
+let io = socketio(server);
+
+let usersCount = 0;
+
+io.on('connection', function(socket){
+    usersCount++;
+
+    io.emit('count_updated', {count: usersCount});
+    socket.on('disconnect', function(){
+        usersCount--;
+    })
+})

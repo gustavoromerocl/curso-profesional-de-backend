@@ -21,3 +21,7 @@ Trabajar con protocolos de red es un desafío por sí mismo, como recordarás, u
 Lo mismo pasa con las Websockets, y aunque Node no incluye un paquete para comunicarnos con este protocolo, existen muchas alternativas, la más popular de entre ellas es Socket.io.
 
 En los siguientes temas vamos a aprender a comunicarnos vía Websockets con Socket.io. ¿Emocionado? También yo, continuemos.
+
+**usuarios conectados en tiempo real**
+
+npm install socket.io
