@@ -29,3 +29,11 @@ npm install socket.io
 **comunicar el servidor http y el servidor de websockets**
 
 npm install socket.io-client
+
+**Conoce Heroku**
+
+instalar cli
+
+https://devcenter.heroku.com/articles/heroku-cli
+
+heroku login
